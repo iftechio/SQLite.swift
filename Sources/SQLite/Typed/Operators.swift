@@ -553,6 +553,12 @@ public func and(_ terms: Expression<Bool>...) -> Expression<Bool> {
 public func and(_ terms: [Expression<Bool>]) -> Expression<Bool> {
     return "AND".infix(terms)
 }
+public func and(_ terms: Expression<Bool?>...) -> Expression<Bool?> {
+    return "AND".infix(terms)
+}
+public func and(_ terms: [Expression<Bool?>]) -> Expression<Bool?> {
+    return "AND".infix(terms)
+}
 public func &&(lhs: Expression<Bool>, rhs: Expression<Bool>) -> Expression<Bool> {
     return Operator.and.infix(lhs, rhs)
 }
@@ -582,6 +588,12 @@ public func or(_ terms: Expression<Bool>...) -> Expression<Bool> {
     return "OR".infix(terms)
 }
 public func or(_ terms: [Expression<Bool>]) -> Expression<Bool> {
+    return "OR".infix(terms)
+}
+public func or(_ terms: Expression<Bool?>...) -> Expression<Bool?> {
+    return "OR".infix(terms)
+}
+public func or(_ terms: [Expression<Bool?>]) -> Expression<Bool?> {
     return "OR".infix(terms)
 }
 public func ||(lhs: Expression<Bool>, rhs: Expression<Bool>) -> Expression<Bool> {
