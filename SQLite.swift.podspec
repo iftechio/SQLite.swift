@@ -35,6 +35,10 @@ Pod::Spec.new do |s|
     ss.private_header_files = 'Sources/SQLiteObjc/*.h'
     ss.library = 'sqlite3'
 
+    ss.xcconfig = {
+      'DEFINES_MODULE' => 'YES'
+    }
+
     ss.test_spec 'tests' do |test_spec|
       test_spec.resources = 'Tests/SQLiteTests/fixtures/*'
       test_spec.source_files = 'Tests/SQLiteTests/*.swift'
